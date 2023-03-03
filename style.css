@@ -60,25 +60,29 @@ header .right-side .last{
     align-items: center;
 }
 
-header .right-side .last h6{
+header .right-side >h6{
     margin-right: 1rem;
+    cursor: pointer;
+}
+header .right-side .last>h5{
     cursor: pointer;
 }
 
 
 /* main window */
 section .tabs-window{
-    margin: 1rem 3%;
+    width: 100%;
+    margin: 1rem  auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgb(241, 244, 247); 
 }
 
 section .tabs-window .left-tab{
     flex-basis: 25%;
     height: 455px;
     padding: 1rem;
-    background-color: rgb(241, 244, 247);
 }
 
 section .tabs-window .left-tab .top-section{
@@ -86,9 +90,6 @@ section .tabs-window .left-tab .top-section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-right: .5px solid rgba(0,0,0,.2);
-
-    border-left:  .4px solid rgba(0,0,0,.2);
 }
 section .tabs-window .left-tab .top-section .fa-plus{
     width: 2rem;
@@ -100,6 +101,7 @@ section .tabs-window .left-tab .top-section .fa-plus{
     color: rgb(241, 240, 240);
     background-color: rgb(65, 102, 158);
     cursor: pointer;
+    margin-right: .5rem;
 }
 
 section .tabs-window .left-tab .top-section .fa-search{
@@ -118,32 +120,44 @@ section .tabs-window .left-tab .bt-section .head{
     border-radius: 2px;
     margin: 1rem 0;
     padding: .5rem 2rem;
-    cursor: pointer;
+    cursor: pointer; 
+    transition: all 300ms ease;
+}
+
+section .tabs-window .bt-section .head.show{
     background-color: rgb(65, 102, 158);
 }
+section .tabs-window .bt-section .head .txt{
+    color: azure;
+}
+
 section .tabs-window .left-tab .bt-section .head h5{
     font-size: 1.2rem;
-    color: beige;
+    color: rgb(58, 58, 58);
 }
 section .tabs-window .left-tab .bt-section .head span{
     font-size: .8rem;
-    color: rgb(236, 236, 236);
+    color: rgb(124, 124, 124);
 }
 
 /* tab window right section */
-
 section .tabs-window .right-tab{
     width: 100%;
     height: 420px;
     padding: 2rem;
-    background-color: rgb(241, 244, 247);
 }
-section .tabs-window .right-tab .top-heading{
+section .tabs-window .right-tab .container.active{
+    display: block;
+}
+section .tabs-window .right-tab .container{
+    display: none;
+}
+section .tabs-window  .right-tab .top-heading{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
-
 section .tabs-window .right-tab .top-heading h1{
     margin-bottom: 2rem;
     cursor: pointer;
