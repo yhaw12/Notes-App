@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -39,7 +42,7 @@ header .left-side i{
     color: gray;
 }
 
-header .left-side .title .bt-sect{
+header .left-side .top-title .bt-sect{
     display: flex;
     align-items: center;
     color: gray;
@@ -143,15 +146,15 @@ section .tabs-window .left-tab .bt-section .head span{
 /* tab window right section */
 section .tabs-window .right-tab{
     width: 100%;
-    height: 420px;
+    height: 450px;
     padding: 2rem;
-}
-section .tabs-window .right-tab .container.active{
-    display: block;
+    overflow-y: hidden;
 }
 section .tabs-window .right-tab .container{
-    display: none;
+    display: block;
+    padding-bottom: 10rem;
 }
+
 section .tabs-window  .right-tab .top-heading{
     display: flex;
     align-items: center;
